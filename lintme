@@ -1,0 +1,6 @@
+#!/bin/bash
+
+poetry run black --check . --exclude .venv
+poetry run isort --check .
+poetry run autopep8 --diff --exit-code .
+poetry run pylint -- webex_skills
